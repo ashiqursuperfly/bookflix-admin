@@ -3,16 +3,6 @@ version: '3.7'
 
 services:
 
-  db:
-    image: mysql:5.7
-    ports:
-      - "3306:3306"
-    restart: always
-    volumes:
-      - mysql_development_data_volume:/var/lib/mysql
-    env_file:
-      - .debug.env
-
   app:
     restart: always
     build:
@@ -21,8 +11,6 @@ services:
       - "8000:8000"
     volumes:
       - development_static_data:/vol/web
-    depends_on:
-      - db
     expose:
       - "443"
     env_file:
@@ -43,4 +31,3 @@ services:
 
 volumes:
   development_static_data:
-  mysql_development_data_volume:
