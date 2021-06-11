@@ -31,6 +31,8 @@ if DEBUG:
 # Application definition
 
 INSTALLED_APPS = [
+    'admin_interface',
+    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core'
 ]
+
+X_FRAME_OPTIONS='SAMEORIGIN'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -75,6 +79,7 @@ WSGI_APPLICATION = 'bookflix_data_collector.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 if DEBUG and not os.environ.get("AWS_RDS_POSTGRES_HOST_URL"):
+    print('sqlite', os.environ.get('AWS_RDS_POSTGRES_DB_NAME'))
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -82,6 +87,7 @@ if DEBUG and not os.environ.get("AWS_RDS_POSTGRES_HOST_URL"):
         }
     }
 else:
+    print('postgres', os.environ.get('AWS_RDS_POSTGRES_DB_NAME'))
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',

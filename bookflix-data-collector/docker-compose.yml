@@ -11,8 +11,6 @@ services:
       - "8000:8000"
     volumes:
       - development_static_data:/vol/web
-    expose:
-      - "443"
     env_file:
       - .debug.env
 
@@ -24,7 +22,6 @@ services:
       - development_static_data:/vol/static
     restart: always
     ports:
-      - "443:443"
       - "80:80"
     depends_on:
       - app

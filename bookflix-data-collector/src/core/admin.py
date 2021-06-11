@@ -1,8 +1,12 @@
 from django.contrib import admin
 
-
 # Register your models here.
-from .models import Author, Genre, Book
+from .models import Author, Genre, Book, Reader
+
+
+@admin.register(Reader)
+class ReaderAdmin(admin.ModelAdmin):
+    list_display = ['name']
 
 
 @admin.register(Author)
@@ -16,5 +20,5 @@ class GenreAdmin(admin.ModelAdmin):
 
 
 @admin.register(Book)
-class GenreAdmin(admin.ModelAdmin):
-    list_display = ['title', 'fileUrl', 'fileType']
+class BookAdmin(admin.ModelAdmin):
+    list_display = ['title', 'file_url', 'file_type']
