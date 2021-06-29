@@ -13,7 +13,7 @@ export AWS_RDS_POSTGRES_MASTER_PASSWORD=b14c856be75c07c3a94d32ac81a7aa7825db013c
 export ALLOWED_HOSTS=127.0.0.1,localhost
 
 python src/manage.py migrate
-python src/manage.py collectstatic
+# python src/manage.py collectstatic
 # python src/manage.py createsuperuser
 # python src/manage.py inspectdb > inspectdb.py
 python src/manage.py runserver
