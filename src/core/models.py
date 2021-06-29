@@ -41,9 +41,15 @@ class Book(models.Model):
     copyright = models.BooleanField()
     language = models.TextField()
     updated_at = models.DateTimeField(db_column='updatedAt')
+    description = models.TextField(blank=True, null=True)
     file_url = models.TextField(db_column='fileUrl', unique=True)
     file_type = models.TextField(db_column='fileType')
     cover_image_url = models.TextField(db_column='coverImageUrl', blank=True, null=True)
+    isbn10 = models.TextField(unique=True, blank=True, null=True)
+    isbn13 = models.TextField(unique=True, blank=True, null=True)
+    maturity_rating = models.TextField(db_column='maturityRating', blank=True, null=True)
+    rating = models.DecimalField(max_digits=65, decimal_places=30, blank=True, null=True)
+    year_published = models.TextField(db_column='yearPublished', blank=True, null=True)
 
     class Meta:
         db_table = 'Book'
@@ -56,9 +62,26 @@ class FavoriteGenre(models.Model):
     relevance = models.IntegerField(blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'FavoriteGenre'
         unique_together = (('genre_id', 'user_id'),)
+
+
+class AuthorToBook(models.Model):
+    author = models.ForeignKey(Author, models.CASCADE, db_column='A')
+    book = models.ForeignKey(Book, models.CASCADE, db_column='B')
+
+    class Meta:
+        db_table = '_AuthorToBook'
+        unique_together = (('author', 'book'),)
+
+
+class BookToGenre(models.Model):
+    author = models.ForeignKey(Book, models.CASCADE, db_column='A')
+    book = models.ForeignKey(Genre, models.CASCADE, db_column='B')
+
+    class Meta:
+        db_table = '_BookToGenre'
+        unique_together = (('author', 'book'),)
 
 
 class ReaderBookInteraction(models.Model):
@@ -72,29 +95,18 @@ class ReaderBookInteraction(models.Model):
     is_on_my_list = models.BooleanField(db_column='isOnMyList')
 
     class Meta:
-        managed = False
         db_table = 'UserBookInteraction'
         unique_together = (('book_id', 'user_id'),)
 
 
-class AuthorToBook(models.Model):
-    a = models.ForeignKey(Author, models.CASCADE, db_column='A')
-    b = models.ForeignKey(Book, models.CASCADE, db_column='B')
+class ReaderAuthorInteraction(models.Model):
+    user_id = models.ForeignKey(Reader, models.CASCADE, db_column='userId')
+    author_id = models.ForeignKey(Author, models.CASCADE, db_column='authorId')
+    is_favorite = models.BooleanField(db_column='isFavorite')
 
     class Meta:
-        managed = False
-        db_table = '_AuthorToBook'
-        unique_together = (('a', 'b'),)
-
-
-class BookToGenre(models.Model):
-    a = models.ForeignKey(Book, models.CASCADE, db_column='A')
-    b = models.ForeignKey(Genre, models.CASCADE, db_column='B')
-
-    class Meta:
-        managed = False
-        db_table = '_BookToGenre'
-        unique_together = (('a', 'b'),)
+        db_table = 'UserAuthorInteraction'
+        unique_together = (('author_id', 'user_id'),)
 
 
 class PrismaMigrations(models.Model):

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b04df2cc-d5ef-4031-a7c7-7b4829dcb7ac" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bookflix-data-collector.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/.debug.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/.idea/bookflix-data-collector.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/deploy-scripts/deploy-update.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/deploy-scripts/first-deploy.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/deploy-scripts/install-certbot-and-letsencrypt.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/deploy-scripts/install-docker-and-docker-compose.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/docker-compose-deploy.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/proxy/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/proxy/default.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/proxy/uwsgi_params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/proxy_development/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/proxy_development/default.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/proxy_development/ssl-debug.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/proxy_development/ssl-debug.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/proxy_development/uwsgi_params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/proxy_development/withssl.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/run.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/scripts/entrypoint.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/src/bookflix_data_collector/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/src/bookflix_data_collector/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/src/bookflix_data_collector/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/src/bookflix_data_collector/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/src/bookflix_data_collector/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/src/core/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/src/core/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/src/core/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/src/core/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/src/core/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/src/core/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/src/core/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/src/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/src/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookflix-data-collector/temp.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1uc2msoHHAHBhapFinF2arm4Stp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b04df2cc-d5ef-4031-a7c7-7b4829dcb7ac" name="Default Changelist" comment="" />
+      <created>1624950719127</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624950719127</updated>
+      <workItem from="1624950722294" duration="2776000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
