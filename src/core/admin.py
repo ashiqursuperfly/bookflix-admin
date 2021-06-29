@@ -37,7 +37,7 @@ class BookAdmin(admin.ModelAdmin):
     @staticmethod
     def date_published(obj):
         if obj.year_published:
-            return str(obj.year_published)[0:3]
+            return str(obj.year_published)[0:4]
         return "n/a"
 
     list_filter = (

@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'bookflix_admin.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 if DEBUG and not os.environ.get("AWS_RDS_POSTGRES_HOST_URL"):
-    print('sqlite', os.environ.get('AWS_RDS_POSTGRES_DB_NAME'))
+    # print('sqlite', os.environ.get('AWS_RDS_POSTGRES_DB_NAME'))
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -85,7 +85,7 @@ if DEBUG and not os.environ.get("AWS_RDS_POSTGRES_HOST_URL"):
         }
     }
 else:
-    print('postgres', os.environ.get('AWS_RDS_POSTGRES_DB_NAME'))
+    # print('postgres', os.environ.get('AWS_RDS_POSTGRES_DB_NAME'))
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
