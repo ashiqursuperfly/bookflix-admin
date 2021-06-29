@@ -15,5 +15,5 @@ export ALLOWED_HOSTS=127.0.0.1,localhost
 python src/manage.py migrate
 python src/manage.py collectstatic
 # python src/manage.py createsuperuser
-python src/manage.py inspectdb > inspectdb.py
+# python src/manage.py inspectdb > inspectdb.py
 python src/manage.py runserver

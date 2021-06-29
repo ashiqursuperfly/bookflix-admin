@@ -17,12 +17,18 @@ class Reader(models.Model):
     class Meta:
         db_table = 'User'
 
+    def __str__(self):
+        return str(self.name)
+
 
 class Genre(models.Model):
     name = models.TextField(unique=True)
 
     class Meta:
         db_table = 'Genre'
+
+    def __str__(self):
+        return str(self.name)
 
 
 class Author(models.Model):
@@ -33,6 +39,9 @@ class Author(models.Model):
 
     class Meta:
         db_table = 'Author'
+
+    def __str__(self):
+        return str(self.name)
 
 
 class Book(models.Model):
@@ -54,16 +63,22 @@ class Book(models.Model):
     class Meta:
         db_table = 'Book'
 
+    def __str__(self):
+        return str(self.title)
+
 
 class FavoriteGenre(models.Model):
     genre_id = models.ForeignKey(Genre, models.CASCADE, db_column='genreId')
     user_id = models.ForeignKey(Reader, models.CASCADE, db_column='userId')
-    type = models.TextField()  # This field type is a guess.
+    type = models.TextField()  # TODO: This field type is a guess.
     relevance = models.IntegerField(blank=True, null=True)
 
     class Meta:
         db_table = 'FavoriteGenre'
-        unique_together = (('genre_id', 'user_id'),)
+        unique_together = ('genre_id', 'user_id')
+
+    def __str__(self):
+        return '{genre: ' + str(self.genre_id) + ", user: " + str(self.user_id) + "}"
 
 
 class AuthorToBook(models.Model):
@@ -72,7 +87,10 @@ class AuthorToBook(models.Model):
 
     class Meta:
         db_table = '_AuthorToBook'
-        unique_together = (('author', 'book'),)
+        unique_together = ('author', 'book')
+
+    def __str__(self):
+        return '{author: ' + str(self.author) + ", book: " + str(self.book) + "}"
 
 
 class BookToGenre(models.Model):
@@ -81,7 +99,10 @@ class BookToGenre(models.Model):
 
     class Meta:
         db_table = '_BookToGenre'
-        unique_together = (('author', 'book'),)
+        unique_together = ('author', 'book')
+
+    def __str__(self):
+        return '{author: ' + str(self.author) + ", book: " + str(self.book) + "}"
 
 
 class ReaderBookInteraction(models.Model):
@@ -96,7 +117,10 @@ class ReaderBookInteraction(models.Model):
 
     class Meta:
         db_table = 'UserBookInteraction'
-        unique_together = (('book_id', 'user_id'),)
+        unique_together = ('book_id', 'user_id')
+
+    def __str__(self):
+        return '{book: ' + str(self.book_id) + ", user: " + str(self.user_id) + ", page" + str(self.current_page) + "}"
 
 
 class ReaderAuthorInteraction(models.Model):
@@ -106,7 +130,10 @@ class ReaderAuthorInteraction(models.Model):
 
     class Meta:
         db_table = 'UserAuthorInteraction'
-        unique_together = (('author_id', 'user_id'),)
+        unique_together = ('author_id', 'user_id')
+
+    def __str__(self):
+        return '{user: ' + str(self.user_id) + ", author: " + str(self.author_id) + ", is_favorite" + str(self.is_favorite) + "}"
 
 
 class PrismaMigrations(models.Model):
