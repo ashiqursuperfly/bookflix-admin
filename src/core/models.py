@@ -108,7 +108,6 @@ class BookToGenre(models.Model):
 class ReaderBookInteraction(models.Model):
     book_id = models.ForeignKey(Book, models.CASCADE, db_column='bookId')
     user_id = models.ForeignKey(Reader, models.CASCADE, db_column='userId')
-    current_page = models.IntegerField(db_column='currentPage')
     is_finished_reading = models.BooleanField(db_column='isFinishedReading')
     start_date = models.DateTimeField(db_column='startDate')
     last_update = models.DateTimeField(db_column='lastUpdate')
@@ -120,7 +119,7 @@ class ReaderBookInteraction(models.Model):
         unique_together = ('book_id', 'user_id')
 
     def __str__(self):
-        return '{book: ' + str(self.book_id) + ", user: " + str(self.user_id) + ", page" + str(self.current_page) + "}"
+        return '{book: ' + str(self.book_id) + ", user: " + str(self.user_id) + ", page" + "}"
 
 
 class ReaderAuthorInteraction(models.Model):

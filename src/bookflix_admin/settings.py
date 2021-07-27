@@ -207,9 +207,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 # TODO: for deployment
+# STATIC_URL = '/static/'
 STATIC_URL = '/static/'
-# STATIC_URL = '/static/static/'
-# STATIC_ROOT = '/vol/web/static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #
 # MEDIA_URL = '/static/media/'
 # MEDIA_ROOT = '/vol/web/media'

@@ -80,7 +80,7 @@ class FavoriteGenreAdmin(admin.ModelAdmin):
 
 @admin.register(ReaderBookInteraction)
 class ReaderBookInteractionAdmin(admin.ModelAdmin):
-    list_display = ['book_id', 'user_id', 'current_page', 'is_favorite', 'is_on_my_list']
+    list_display = ['book_id', 'user_id', 'is_favorite', 'is_on_my_list']
 
 
 @admin.register(ReaderAuthorInteraction)
