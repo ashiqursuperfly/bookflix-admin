@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b04df2cc-d5ef-4031-a7c7-7b4829dcb7ac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.debug.env" beforeDir="false" afterPath="$PROJECT_DIR$/.debug.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bookflix_admin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/bookflix_admin/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +41,8 @@
       <workItem from="1625042407876" duration="618000" />
       <workItem from="1625130091367" duration="23000" />
       <workItem from="1627393706511" duration="239000" />
-      <workItem from="1627393966364" duration="2005000" />
+      <workItem from="1627393966364" duration="2773000" />
+      <workItem from="1627620045348" duration="18000" />
     </task>
     <servers />
   </component>
